@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "duckies-flight-planning-nl",
+  "private_key_id": "7a9efeaf1e0ba9803abd33f697e4ce68fa6f6101",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC4k7kXQ33ixc1q\nNfsQRNCJQYD4LAhV/GJCrWtJpCd59lVli3ucooFkgoC2RgAXL5g3A5kLfPVfi3Ym\nNcPscNKZwLyDGS+K0tymMMDROtaf7/xz7BEKfbKioI4WtlGarT9NE/uDc8UNqHd5\nGIFB1GiCqyAZ53fJezEyYwOj5dNm+G6ZzwJdYEnsHc+H/CcVjwu2WZafg6A9sU2f\n+8+iW2Qf90kePx02zQhKNGUr5Zf7ntNRejK5+CwFtPoy10sGofRbJ+udVcjwv6Qp\nZElBn9ASZhH5Q2YZQ08J2fo1k5WC2uuW4DSOOO0d8YpH2eV92aYHOBjaEOcf7A6H\nD7miY7jfAgMBAAECggEABWGeE5QOxltpqLLoFs3yz6BM469oEwhewT6TcniVA52r\n5ycrhkW59ly35rwZZcyLmik7Tatitnch8RgGwMzRDw4upijy4CxTicSlHSncRQwF\nNQ9XRdlOqZglv+yL2/jjb9p3WLbWMk+TzlzbQhwia68UVSCQxXDCF32YFUxEAsGK\nplvuK96lnF7E3mO1RDyG6lJRQ/ZqHRcm+AF69iEy97IJWtFqUpIhy/PyJlP3LpQs\nY4bF3/4TU4IRE8WKPOsDB3f6gLQ8TG+HmZuz9u2+tE4lfEGU32hVoA8jNefDrvDG\nJBBg3pyDIP49GHYibzoS4JAnuXeG/D7wiDfXn09iiQKBgQDsYDv1IWrrPpZMafX8\ngj+avX7OnmVIGQKymRaaw4LhmsIBINxG64EvHJvarc8LkL3Lgc01LcaNE64KHa8c\njvnk0GIOX4Fq2WOUl7u4FHWEMVWnvUUoo09pElh5mDpXlyQBNEJL92GL/8etAi5f\nWJm17zXHw/LUsE1Zmfmr6e/ENwKBgQDH5pelymeEP+1GmKad/CXslQmcWyqs2w3E\nxUJQCfk14AoBkpbt6AezHb8GPTnX+gjVp0BeGOj30rCgvjevTY99YQ8n0IdlLyY5\nvVNLIaq6mZ7KRj26zRv2K6BbNLhuRnZgx2etdd49X7/+JwobJKsG0okjJPhx2IeM\n5Ze1c5IsmQKBgQDO62dRLNHF4OH9PnzBcNtxABUzlmEe/hXodi7dh+zYxXqzNire\nQmax8R9WDPTEMQ6USapztQCsmt+tp1KVc2u6K9jKsDxAZtDPUQxZFj/RWsaasgsK\nifuIBTFCMEpSRtKT40Vt7r6LqXsILnKdsJfONfskRpoaKcNsfmebYIwtfQKBgQCc\nIWOibxMo/REjCYlhbZZlUQafo6kSN0lqvbMMdq25wZGvJsJRcN/Kq1oO0nVCVhze\nWvJwTD5xiZLBCbDOb+K5x7whmcKWahwODuxmixYhBmk6jWAbbaYAQJTPh77hCpHd\nBwHYPm5lO0rmg7Fl/97AxmGsHG0b5kYA6zXx2CF8SQKBgFpoT0c/E37noVDVaB/0\nput1G1P2TFFqlppgDwQgnBVM1yNLg+fD6KKU71llnp7GB3dNUaCJo/HLWE3Z6FWP\nZy/P1kMmqYP7H8JK0WEm1sV9muJaK01EWE0pI6r7henkgYcxyiiqk6tMJf9zKbMZ\nMkWxmRsyi+xd3OaVoV8yRVPV\n-----END PRIVATE KEY-----\n",
+  "client_email": "duckies@duckies-flight-planning-nl.iam.gserviceaccount.com",
+  "client_id": "106315296864113578928",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/duckies%40duckies-flight-planning-nl.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
