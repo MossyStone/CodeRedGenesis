@@ -1,5 +1,5 @@
 from openai import OpenAI
-from pyspark.sql.types import FloatType
+from pyspark import FloatType
 import requests
 import json
 
