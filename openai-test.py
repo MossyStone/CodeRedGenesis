@@ -1,25 +1,41 @@
 from openai import OpenAI
-from pyspark import FloatType
 import requests
 import json
 
 
 client = OpenAI(
-    api_key ="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"
+    api_key ="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"
 )
+
+userRequest = input("Hi! Tell me some information about the flight you want: ")
 
 # Use the Completion endpoint to generate text based on the input prompt
 response = client.chat.completions.create(
     model="gpt-3.5-turbo",  # Choose the GPT model
     messages=[
-            {"role": "system", "content": "Extract the relevant information from the user's request and create a link like so:https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=SYD&destinationLocationCode=BKK&departureDate=2024-05-02&adults=1&nonStop=false&max=100. Convert city names to location codes. The year is 2024 by default. Use the following variable names: originLocationCode, destinationLocationCode, departureDate, returnDate, adults, children, infants, travelClass, includedAirlineCodes, nonStop, currencyCode, maxPrice, max. "},
-            {"role": "user", "content": "I want to fly from London to Paris in next 2 days, get me the cheapest fare."}
+            {"role": "system", "content": "Extract the relevant information from the user's request and create a link like so:https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=SYD&destinationLocationCode=BKK&departureDate=2024-05-02&adults=1&nonStop=false&max=100. Convert city names to location codes. The year is 2024 by default. Use the following variable names: originLocationCode, destinationLocationCode, departureDate, returnDate, adults, children, infants, travelClass, includedAirlineCodes, nonStop, currencyCode, maxPrice, max. Respond with just the link and nothing else."},
+            {"role": "user", "content": userRequest}
             ]
 )
 
 print(response.choices[0])
 
 amadeusLink = response.choices[0]
+
+
+##############Generate natural language response########################
+# Use the Completion endpoint to generate text based on the input prompt
+""""
+response = client.chat.completions.create(
+    model="gpt-3.5-turbo",  # Choose the GPT model
+    messages=[
+            {"role": "system", "content": ""},
+            {"role": "user", "content": ""}
+            ]
+)
+"""
+print(response.choices[0])
+
 
 
 ######################Amadeus API############################
