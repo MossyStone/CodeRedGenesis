@@ -64,9 +64,12 @@
 
     <section class="section__container booking__container">
       <div class="booking__nav">
-        <button class="economy-btn">Economy Class</button>
-        <button class="business-btn">Business Class</button>
-        <button class="first-btn">First Class</button>
+        <button class="toggle-button economy-btn" onclick="
+          toggleButton('.economy-btn')">Economy Class</button>
+        <button class="toggle-button business-btn" onclick="
+        toggleButton('.business-btn')">Business Class</button>
+        <button class="toggle-button first-btn" onclick="
+        toggleButton('.first-btn')">First Class</button>
       </div>
       <form>
         <div class="form__group">
@@ -158,5 +161,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="codered.js"></script>
   </body>
 </html>
