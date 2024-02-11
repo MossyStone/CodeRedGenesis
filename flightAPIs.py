@@ -1,5 +1,3 @@
-import re
-import base64
 from flask import Flask, render_template, request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
@@ -8,6 +6,8 @@ from googleapiclient.discovery import build
 import os
 import pickle
 import json
+import base64
+import re
 
 app = Flask(__name__)
 
@@ -97,6 +97,34 @@ def send_email_request():
     send_email(sender="nowmeetarrow909@gmail.com", recipient=user_email, subject="Your Request", body="Dear User,\n\nThank you for contacting us. We have received your request and will get back to you shortly.\n\nBest regards,\nThe Team")
 
     return 'Emails sent successfully'
+
+@app.route('/results', methods=['POST'])
+def display_results():
+    if request.method == 'POST':
+        submitted_text = request.form.get('text')
+        return render_template('results.html', submitted_text=submitted_text)
+    else:
+        return "Method Not Allowed", 405
+    
+@app.route('/sendIt', methods=['POST'])
+def sendItenary():
+    if request.method == 'POST':
+        send_email_flag = request.form.get('send_email')  # Check if user wants to receive email
+        email = request.form.get('email')  # Get user's email address
+        submitted_text = request.form.get('text')  # Get submitted text
+
+        if send_email_flag and email:  # If user wants to receive email and provided an email address
+            sender_email = 'your_email@gmail.com'  # Replace with your email
+            subject = 'Your Itinerary'
+            body = f'Here is your submitted text: {submitted_text}'  # Customize email body
+
+            # Send email
+            if send_email(sender_email, email, subject, body):
+                return 'Email sent successfully'
+            else:
+                return 'Failed to send email. Please try again later.'
+
+    return 'Invalid request'
 
 if __name__ == '__main__':
     port = get_port_from_credentials(CREDENTIALS_FILE_PATH)
