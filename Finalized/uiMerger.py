@@ -82,11 +82,30 @@ def send_email(sender, recipient, subject, body):
 #End of py scripts
 
 #Start of API calls
+from openai import OpenAI
+client = OpenAI(
+    api_key ="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"
+)
+
+# Use the Completion endpoint to generate text based on the input prompt
+response = client.chat.completions.create(
+    model="gpt-3.5-turbo",  # Choose the GPT model
+    messages=[
+            {"role": "system", "content": "Extract the relevant information from the user's request and create a link like so: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=SYD&destinationLocationCode=BKK&departureDate=2024-05-02&adults=1&nonStop=false&max=100. Convert city names to location codes. The year is 2024 by default. Use the following variable names: originLocationCode, destinationLocationCode, departureDate, returnDate, adults, children, infants, travelClass, includedAirlineCodes, nonStop, currencyCode, maxPrice, max. "},
+            {"role": "user", "content": "I want to fly from London to Paris in next 2 days, get me the cheapest fare."}
+            ]
+)
+
+print(response.choices[0])
+
+amadeusLink = response.choices[0]
+
+
     # Amadeus API request function
-def amadeus_request(origin, destination, departure_date, return_date):
+def amadeus_request(amadeusLink):
     token = 'VliefaCN6z0MeLlcg1VD2AGGGYr7'
     headers = {'Authorization': 'Bearer ' + token}
-    url = f'https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode={origin}&destinationLocationCode={destination}&departureDate={departure_date}&returnDate={return_date}&adults=1&nonStop=false&max=100'
+    url = amadeusLink #f'https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode={origin}&destinationLocationCode={destination}&departureDate={departure_date}&returnDate={return_date}&adults=1&nonStop=false&max=100'
     resp = requests.get(url, headers=headers)
     offers = resp.json()["data"]
     prices = [float(offer["price"]["grandTotal"]) for offer in offers]
