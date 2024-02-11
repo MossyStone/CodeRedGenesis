@@ -35,3 +35,16 @@ function isValidEmail(email) {
   var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 }
+
+function displayFlightTicket() {
+  const origin = document.getElementById("origin").value;
+  const destination = document.getElementById("destination").value;
+  const d_date = document.getElementById("d-date").value;
+  const r_date = document.getElementById("r-date").value;
+  if (origin.trim() === "" || destination.trim() === "" || d_date.trim() === "" || r_date.trim() == "") {
+    alert("Please finish the flight ticket information form.");
+  }
+  else { 
+  alert(`Here are your flight tickets information:\nFrom ${origin} to ${destination} departing on ${d_date} and returning on ${r_date}:`);
+  }
+}
