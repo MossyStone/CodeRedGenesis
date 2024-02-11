@@ -98,7 +98,7 @@ body {
   border-radius: 5px;
 }
 
-.booking__nav button {
+.economy-btn, .business-btn, .first-btn {
   flex: 1;
   padding: 1rem 2rem;
   font-weight: 500;
@@ -136,6 +136,11 @@ body {
 }
 .booking__container{
   padding: 30px 10px 50px 10px;
+}
+
+.is-toggled {
+  color: white;
+  background-color: var(--primary-color);
 }
 
 .booking__container form {
