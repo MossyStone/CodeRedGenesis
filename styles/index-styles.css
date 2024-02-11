@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+.background-img{
+  height: 500px;
+  margin-top: 0px;
+}
+.descriptions{
+  margin-top: 0px;
+}
+:root {
+  --primary-color: rgb(61, 92, 184);
+  --primary-color-dark: rgb(51, 76, 153);
+  --text-dark: rgb(15, 23, 42);
+  --text-light: rgb(100, 116, 139);
+  --extra-light: rgb(241, 245, 249);
+  --white: rgb(255, 255, 255);
+  --max-width: 1520px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section__header {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 3rem;
+  color: var(--text-dark);
+}
+.booking-input-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.booking_input{
+  flex: 0.8;
+  height: 36px;
+  font-size: 16px;
+  border: 1px solid rgb(192, 191, 191);
+  border-radius:25px;
+  box-shadow: inset 1px 2px 3px rgba(0,0,0,0.05);
+  padding-left: 10px;
+  margin-bottom: 50px;
+}
+::placeholder{
+  padding-left: 5px;
+}
+.btn {
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 80px;
+  justify-content: center;
+}
+
+.btn:hover {
+  background-color: var(--primary-color-dark);
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.header__container .section__header {
+  text-align: center;
+  font-size: 3rem;
+  line-height: 4rem;
+}
+
+.booking__container {
+  border-radius: 2rem;
+  border: 1px solid var(--extra-light);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.booking__nav {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  background-color: var(--extra-light);
+  border-radius: 5px;
+}
+
+.booking__nav button {
+  flex: 1;
+  padding: 1rem 2rem;
+  font-weight: 500;
+  color: var(--text-light);
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
+
+.nav__logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flight-icon{
+  height: 40px;
+  padding-right: 12px;
+}
+.economy-btn, .first-btn, .business-btn{
+  font-size: 15px;
+}
+.economy-btn:hover{
+  color: var(--white);
+  background-color: var(--primary-color);
+}
+
+.business-btn:hover{
+  color: var(--white);
+  background-color: var(--primary-color);
+}
+.first-btn:hover{
+  color: var(--white);
+  background-color: var(--primary-color);
+}
+.booking__container{
+  padding: 30px 10px 50px 10px;
+}
+
+.booking__container form {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) auto;
+  gap: 1rem;
+}
+
+.booking__container .input__content {
+  width: 100%;
+}
+
+.booking__container .form__group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.booking__container .form__group span {
+  padding: 10px;
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  background-color: var(--extra-light);
+  border-radius: 1rem;
+}
+
+.booking__container .input__group {
+  width: 100%;
+  position: relative;
+}
+
+.input::placeholder{
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-dark);
+
+}
+
+.booking__container input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--primary-color);
+  color: var(--text-dark);
+}
+
+.booking__container input:focus ~ label {
+  font-size: 0.8rem;
+  top: 0;
+}
+
+.booking__container .form__group p {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.booking__container .btn {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.subscribe {
+  background-color: var(--extra-light);
+}
+
+.subscribe__container {
+  max-width: 500px;
+  text-align: center;
+}
+
+@media (width < 1200px) {
+  .section__container.header__container,
+  .section__container.plan__container,
+  .section__container.lounge__container {
+    overflow: hidden;
+  }
+}
+
+@media (width < 900px) {
+  nav .btn {
+    display: none;
+  }
+
+  .booking__container form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer__container {
+    gap: 2rem;
+  }
+}
+@media (width < 600px) {
+  .nav__links {
+    display: none;
+  }
+
+  .booking__nav button {
+    padding: 1rem 0.5rem;
+  }
+
+  .booking__container form {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .footer__container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__bar {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.user-input-container{
+  display: flex;
+  justify-content: center;
+}
+.user-input{
+  width: 500px;
+  height: 40px;
+  margin-top: 2rem;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--white);
+  border-radius: 2rem;
+  border-width: 1px;
+}
+
+.background{
+  height: 300px;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+#email, #name{
+  border: 1px solid #ccc; 
+  margin-bottom: 10px;
+}
+/* Style the submit button with a specific background color etc */
+.submit {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+.submit:hover{
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.voice-search-button{
+  height: 40px; 
+  width: 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(248,248,248);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; 
+}
+.voice-search-icon{
+  height: 25px;
+}
+.voice-search-button:hover{
+  background-color: rgb(246, 241, 241)
+}
+.voice-search-button .tooltip{
+  position: absolute;
+  background-color: gray;
+  color: black;
+  padding: 4px 8px 4px 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  bottom: -30px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space:nowrap;
+}
