@@ -6,8 +6,24 @@
     <title>Results</title>
 </head>
 <body>
-    <h1>Result</h1>
-    <p>Text entered:</p>
-    <textarea rows="4" cols="50" readonly>{{ text }}</textarea>
+    <h1>Results</h1>
+    <p>Submitted text:</p>
+    <p>{{ submitted_text }}</p>
+
+    <h1>Itinerary Results</h1>
+    <p>Submitted text:</p>
+    <p>{{ submitted_text }}</p>
+    
+    <form action="/sendIt" method="POST">
+        <label for="send_email">Send Email:</label>
+        <input type="checkbox" id="send_email" name="send_email" value="send">
+        <label for="send_email">Yes</label>
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <input type="hidden" id="text" name="text" value="{{ submitted_text }}">
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
