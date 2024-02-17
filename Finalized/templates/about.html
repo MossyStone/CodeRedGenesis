@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/about-styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/footer.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/CheapFlight-favicon.png') }}">
+    <title>CheapFlight</title>
+</head>
+<body>
+<nav class="first-nav-bar">
+    <a class="nav__logo" href="{{ url_for('index') }}"><img class="flight-icon" src="{{ url_for('static', filename='images/PROSLogoRGB.png') }}"><h6 class="sub-company">CheapFlight</h6></a>
+    <ul class="nav__links">
+        <li class="link"><a href="{{ url_for('index') }}">Home</a></li>
+        <li class="link"><a href="{{ url_for('about') }}">About Us</a></li>
+        <li class="link"><a href="#">Chat</a></li>
+    </ul>
+</nav>
+<header class="section__container header__container">
+    <h1 class="section__header">About Us</h1>
+</header>
+
+<div class="logos">
+    <div class="logos-slide">
+        <img src="{{ url_for('static', filename='slider/slider1.jpg') }}">
+        <img src="{{ url_for('static', filename='slider/slider2.jpg') }}">
+        <img src="{{ url_for('static', filename='slider/slider3.jpg') }}">
+        <img src="{{ url_for('static', filename='slider/slider4.jpg') }}">
+        <img src="{{ url_for('static', filename='slider/slider5.jpg') }}">
+        <img src="{{ url_for('static', filename='slider/slider6.jpg') }}">
+        <img src="{{ url_for('static', filename='slider/slider7.jpg') }}">
+        <img src="{{ url_for('static', filename='slider/slider8.jpg') }}">
+        <img src="{{ url_for('static', filename='slider/slider9.jpg') }}">
+    </div>
+    <div class="logos-slide">
+        <img src="{{ url_for('static', filename='slider/slider1.jpg') }}">
+        <img src="{{ url_for('static', filename='slider/slider2.jpg') }}">
+        <img src="{{ url_for('static', filename='slider/slider3.jpg') }}">
+        <img src="{{ url_for('static', filename='slider/slider4.jpg') }}">
+        <img src="{{ url_for('static', filename='slider/slider5.jpg') }}">
+        <img src="{{ url_for('static', filename='slider/slider6.jpg') }}">
+        <img src="{{ url_for('static', filename='slider/slider7.jpg') }}">
+        <img src="{{ url_for('static', filename='slider/slider8.jpg') }}">
+        <img src="{{ url_for('static', filename='slider/slider9.jpg') }}">
+    </div>
+</div>
+
+<section class="subscribe">
+    <div class="section__container subscribe__container">
+        <h3 class="section__header">CheapFlight by <img src="{{ url_for('static', filename='images/PROSLogoRGB.png') }}"></h3>
+    </div>
+    <hr>
+    <div class="about-us-text">
+        <h4 class="about-us-paragraphs">Your Gateway to Affordable Travel</h4>
+        <p class="about-us-paragraphs">At CheapFlight, we believe that everyone deserves the opportunity to explore the world without breaking the bank. Our mission is simple: to provide you with access to the cheapest flight deals available, so you can embark on your dream adventures without worrying about the cost.</p>
+        <!-- Remaining content -->
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="section__container footer__container">
+        <div class="footer__col">
+            <h3>CheapFlight</h3>
+            <p>
+                Welcome to CheapFlight: Your Gateway to Affordable Travel
+            </p>
+            <p>
+                At CheapFlight, we believe that everyone deserves the opportunity to explore the world without breaking the bank. Our mission is simple: to provide you with access to the cheapest flight deals available, so you can embark on your dream adventures without worrying about the cost.
+            </p>
+        </div>
+        <div class="footer__col">
+            <h4>INFORMATION</h4>
+            <a href="{{ url_for('index') }}"><p>Home</p></a>
+            <a href="{{ url_for('about') }}"><p>About Us</p></a>
+            <a href="#"><p>Chat</p></a>
+        </div>
+    </div>
+    <div class="section__container footer__bar">
+        <p class="copyright">Copyright © 2024 Duckies - CodeRED Genesis. All rights reserved.</p>
+        <div class="socials">
+            <span><i class="ri-github-fill"></i></span>
+
+            <span><i class="ri-facebook-fill"></i></span>
+            <span><i class="ri-twitter-fill"></i></span>
+            <span><i class="ri-instagram-line"></i></span>
+            <span><i class="ri-youtube-fill"></i></span>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
